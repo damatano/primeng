@@ -122,6 +122,8 @@ export class Sidebar implements AfterViewInit, AfterViewChecked, OnDestroy {
         this.executePostDisplayActions = true;
         if(this.autoZIndex) {
             this.containerViewChild.nativeElement.style.zIndex = String(this.baseZIndex + (++DomHandler.zindex));
+        }else{
+            this.containerViewChild.nativeElement.style.zIndex = String(this.baseZIndex);
         }
 
         if(this.modal) {
